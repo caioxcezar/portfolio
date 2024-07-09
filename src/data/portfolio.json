@@ -1,0 +1,24 @@
+{
+  "id": "portfolio",
+  "title": "Portfolio",
+  "items": [
+    {
+      "title": "Package Manager",
+      "subtitle": "",
+      "description": "A simple app writen in Rust to manage multiples packages managers.",
+      "image": "https://raw.githubusercontent.com/caioxcezar/package-manager/main/img.png"
+    },
+    {
+      "title": "BlazorAppML",
+      "subtitle": "",
+      "description": "I made this project to to learn about ML.Net, Blazor and Stable Diffusion.",
+      "image": "https://raw.githubusercontent.com/caioxcezar/BlazorAppML/master/Screenshot/StableDiffusion.png"
+    },
+    {
+      "title": "Game Translator",
+      "subtitle": "",
+      "description": "App for translating applications using OCR (Optical Character Recognition)",
+      "image": "https://raw.githubusercontent.com/caioxcezar/game-translator/master/img.png"
+    }
+  ]
+}

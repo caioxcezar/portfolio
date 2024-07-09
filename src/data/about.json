@@ -1,0 +1,11 @@
+{
+  "id": "about",
+  "image": "https://avatars.githubusercontent.com/u/19518715?v=4",
+  "title": "About Me",
+  "badges": [
+    { "icon": "icon-terminal", "text": "Full Stack Developer" },
+    { "icon": "icon-code", "text": ".Net, React, Redis" },
+    { "icon": "icon-bug", "text": "Linux, Windows, Git" }
+  ],
+  "body": "Software developer with experience in desktop, mobile and web development. Always committed to continuous learning. \nExperience in various programming languages and technologies such as C#, JavaScript, SQL, React Native, .NET Framework, and Spring Boot. \nHeld positions ranging from internships to leadership roles, where I gained experience in software development, team leadership, and technical support. \nMainly worked in Portuguese and with languages such as C#, VB. Net and JavaScript (React and React Native)."
+}

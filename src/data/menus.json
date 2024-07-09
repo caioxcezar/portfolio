@@ -1,0 +1,8 @@
+[
+  { "title": "About Me", "target": "#about" },
+  { "title": "Portfolio", "target": "#portfolio" },
+  { "title": "Strengths", "target": "#strengths" },
+  { "title": "Experience", "target": "#experience" },
+  { "title": "Education", "target": "#education" },
+  { "title": "Contact", "target": "#contact" }
+]
