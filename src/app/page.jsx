@@ -33,7 +33,7 @@ export default function Home() {
         <Coffee className="mb-4" />
       </div>
       <div className="col-span-4">
-        <div className="container mx-auto px-4 h-screen overflow-scroll p-4">
+        <div className="container mx-auto px-4 h-screen overflow-x-auto p-4">
           <div className="flex flex gap-4 flex-col">
             <Card id={about.id} image={about.image} title={about.title}>
               <>
