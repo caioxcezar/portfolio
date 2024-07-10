@@ -1,10 +1,9 @@
 const icon = {
-  "info-circled": <>&#xe800;</>,
-  "icon-left-dir": <>&#xe801;</>,
+  "icon-users": <>&#xe806;</>,
+  "icon-magic": <>&#xf0d0;</>,
   "icon-chat": <>&#xe802;</>,
   "icon-emo-coffee": <>&#xe804;</>,
   "icon-steam": <>&#xe805;</>,
-  "icon-angle-double-right": <>&#xf101;</>,
   "icon-github": <>&#xf113;</>,
   "icon-terminal": <>&#xf120;</>,
   "icon-code": <>&#xf121;</>,

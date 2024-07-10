@@ -1,5 +1,26 @@
 {
   "id": "strengths",
   "title": "Strengths",
-  "items": []
+  "items": [
+    {
+      "icon": "icon-bug",
+      "title": "Devops and Automation",
+      "description": "I streamline software development through robust DevOps practices and automation, ensuring efficient and reliable delivery pipelines."
+    },
+    {
+      "icon": "icon-chat",
+      "title": "Leadership",
+      "description": "I inspire and guide teams to achieve their goals, fostering a collaborative and inclusive environment for professional growth."
+    },
+    {
+      "icon": "icon-users",
+      "title": "Teamwork",
+      "description": "I collaborate effectively within diverse teams, leveraging collective strengths and fostering a supportive environment to achieve shared goals."
+    },
+    {
+      "icon": "icon-magic",
+      "title": "Problem Solving",
+      "description": "I tackle complex challenges with analytical thinking and innovative solutions, driving continuous improvement and effective outcomes."
+    }
+  ]
 }

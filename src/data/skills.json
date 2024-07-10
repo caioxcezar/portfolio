@@ -1,0 +1,39 @@
+{
+  "id": "skills",
+  "title": "Skills",
+  "description": "Time spend in different technologies",
+  "items": {
+    "Frontend Development": [
+      { "title": "React", "start": "2021", "end": "present" },
+      { "title": "GTK", "start": "2023", "end": "present" },
+      { "title": "WinForms", "start": "2018", "end": "2021" },
+      { "title": "Razor", "start": "2018", "end": "present" }
+    ],
+    "Backend Development": [
+      { "title": ".NET", "start": "2018", "end": "present" },
+      { "title": "Node.js", "start": "2023", "end": "2024" },
+      { "title": "Spring", "start": "2017", "end": "2020" }
+    ],
+    "Databases": [
+      { "title": "SQLServer", "start": "2018", "end": "present" },
+      { "title": "MariaDB/MySQL", "start": "2018", "end": "present" },
+      { "title": "SQlite", "start": "2021", "end": "present" },
+      { "title": "Redis", "start": "2023", "end": "present" }
+    ],
+    "Mobile": [{ "title": "React Native", "start": "2020", "end": "present" }],
+    "Languages": [
+      { "title": "C#", "start": "2018", "end": "present" },
+      { "title": "JavaScript", "start": "2018", "end": "present" },
+      { "title": "Rust", "start": "2023", "end": "present" },
+      { "title": "Java", "start": "2017", "end": "2020" },
+      { "title": "TypeScript", "start": "2024", "end": "present" },
+      { "title": "VB6", "start": "2019", "end": "2021" }
+    ],
+    "Others": [
+      { "title": "Github Actions", "start": "2023", "end": "present" },
+      { "title": "Nunit", "start": "2018", "end": "present" },
+      { "title": "Junit", "start": "2017", "end": "2020" },
+      { "title": "Git", "start": "2018", "end": "2021" }
+    ]
+  }
+}

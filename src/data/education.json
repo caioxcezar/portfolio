@@ -1,5 +1,11 @@
 {
   "id": "education",
   "title": "Education",
-  "items": []
+  "items": [
+    {
+      "title": "Instituto Metodista Granbery",
+      "description": "Information Systems",
+      "date": "2015 - 2019"
+    }
+  ]
 }

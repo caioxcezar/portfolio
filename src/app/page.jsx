@@ -8,6 +8,7 @@ import about from "@/data/about.json";
 import experience from "@/data/experience.json";
 import portfolio from "@/data/portfolio.json";
 import strengths from "@/data/strengths.json";
+import skills from "@/data/skills.json";
 import education from "@/data/education.json";
 import contact from "@/data/contact.json";
 
@@ -15,6 +16,11 @@ import Chip from "@/components/chip";
 import FlatList from "@/components/flatList";
 import Image from "next/image";
 import Coffee from "@/components/coffee";
+import Icon from "@/components/icon";
+import Progress from "@/components/progress";
+
+const getCurrentYear = () => new Date().getFullYear();
+const workingStartDate = getCurrentYear() - 2018 + 1;
 
 export default function Home() {
   const hash = useHash();
@@ -70,7 +76,59 @@ export default function Home() {
                 )}
               />
             </Card>
-            <Card id={strengths.id} title={strengths.title}></Card>
+            <Card id={strengths.id} title={strengths.title}>
+              <FlatList
+                items={strengths.items}
+                keyExtractor={(item) => item.title}
+                renderItem={({ title, description, icon }, id) => (
+                  <div
+                    className={`grid grid-cols-12 border-dotted py-2 ${
+                      strengths.items.length != id + 1 && "border-b-2"
+                    }`}
+                  >
+                    <div className="col-span-3">
+                      <Icon name={icon} className="text-xl" />
+                      <span className="text-xl">{title}</span>
+                    </div>
+                    <div className="col-span-9">{description}</div>
+                  </div>
+                )}
+              />
+            </Card>
+            <Card id={skills.id} title={skills.title}>
+              <div>
+                <p className="text-lg">{skills.description}</p>
+                <FlatList
+                  className={"grid grid-cols-2 gap-4"}
+                  items={Object.keys(skills.items)}
+                  keyExtractor={(item) => item}
+                  renderItem={(key) => {
+                    const itens = skills.items[key];
+                    return (
+                      <div>
+                        <p className="text-xl font-bold">{key}</p>
+                        {itens.map(({ title, start, end }) => {
+                          const _end =
+                            end == "present"
+                              ? new Date().getFullYear()
+                              : Number(end);
+                          const qtd = _end - start + 1;
+                          const size = Math.round(
+                            (qtd / workingStartDate) * 100
+                          );
+                          return (
+                            <div>
+                              <span className="text-lg">{title}</span>
+                              <Progress size={size} />
+                            </div>
+                          );
+                        })}
+                      </div>
+                    );
+                  }}
+                />
+              </div>
+            </Card>
             <Card id={experience.id} title={experience.title}>
               <FlatList
                 className={"border-dotted border-s-2 mt-4"}
@@ -91,7 +149,19 @@ export default function Home() {
                 )}
               />
             </Card>
-            <Card id={education.id} title={education.title}></Card>
+            <Card id={education.id} title={education.title}>
+              <FlatList
+                items={education.items}
+                keyExtractor={(item) => item.title}
+                renderItem={({ title, description, date }) => (
+                  <div className="">
+                    <p className="text-xl font-bold">{title}</p>
+                    <p className="text-lg">{description}</p>
+                    <p className="text-base">{date}</p>
+                  </div>
+                )}
+              />
+            </Card>
             <Card id={contact.id} title={contact.title}></Card>
           </div>
         </div>
