@@ -117,7 +117,7 @@ export default function Home() {
                             (qtd / workingStartDate) * 100
                           );
                           return (
-                            <div>
+                            <div key={title}>
                               <span className="text-lg">{title}</span>
                               <Progress size={size} />
                             </div>
