@@ -21,11 +21,14 @@ import Progress from "@/components/progress";
 import Input from "@/components/input";
 import { useState } from "react";
 import Button from "@/components/button";
+import useTheme from "@/hooks/useTheme";
+import TopIcon from "@/components/topIcon";
 
 const getCurrentYear = () => new Date().getFullYear();
 const workingStartDate = getCurrentYear() - 2018 + 1;
 
 export default function Home() {
+  const theme = useTheme();
   const hash = useHash();
   const [subject, setSubject] = useState("");
   const [body, setBody] = useState("");
@@ -45,9 +48,13 @@ export default function Home() {
     window.open(url);
   };
 
+  const openLinkedIn = () =>
+    window.open("https://www.linkedin.com/in/caiocsrezende/");
+
   return (
-    <main className="body grid grid-cols-5 bg-gray-950 w-100 h-dvh select-none">
-      <div className="flex flex-col shadow-gray-900 shadow-ml bg-gray-900/75 rounded-2xl m-4">
+    <main className="body grid grid-cols-5 dark:bg-gray-950 bg-gray-400 w-100 h-dvh select-none">
+      <div className="flex flex-col shadow-gray-900 shadow-ml dark:bg-black/50 bg-gray-50/75 text-gray-900 dark:text-gray-50 rounded-2xl m-4">
+        <div className="text-4xl font-bold mb-4">Caio Rezende</div>
         <ul className="nav py-4 flex-1">
           <FlatList
             items={menus}
@@ -60,7 +67,23 @@ export default function Home() {
         <Coffee className="mb-4" />
       </div>
       <div className="col-span-4">
-        <div className="container mx-auto px-4 h-screen overflow-x-auto p-4">
+        <div className="container mx-auto px-4 h-screen overflow-x-auto pb-4">
+          <div className="mb-4">
+            <TopIcon
+              icon={theme.value == "dark" ? "icon-moon-inv" : "icon-sun-inv"}
+              onclick={theme.changeTheme}
+              className="me-2"
+            />
+            <TopIcon
+              icon={"icon-linkedin-squared"}
+              onclick={openLinkedIn}
+              className="me-2"
+            />
+            <TopIcon
+              icon={"icon-github"}
+              onclick={() => window.open("https://github.com/caioxcezar")}
+            />
+          </div>
           <div className="flex flex gap-4 flex-col">
             <Card id={about.id} image={about.image} title={about.title}>
               <>
@@ -152,13 +175,13 @@ export default function Home() {
             </Card>
             <Card id={experience.id} title={experience.title}>
               <FlatList
-                className={"border-dotted border-s-2 mt-4"}
+                className={"border-dotted border-s-2 mt-4 border-indigo-500"}
                 items={experience.items}
                 keyExtractor={(item) => item.title}
                 renderItem={(item) => (
                   <>
                     <div className="flex">
-                      <div>...</div>
+                      <div className="text-indigo-500">...</div>
                       <Chip text={item.date} color="white" />
                     </div>
                     <div className="pl-4 py-4">
@@ -186,12 +209,7 @@ export default function Home() {
             <Card id={contact.id} title={contact.title}>
               <span className="text-xl">
                 Send a e-mail or message via{" "}
-                <Button
-                  title={"LinkedIn"}
-                  onclick={() =>
-                    window.open("https://www.linkedin.com/in/caiocsrezende/")
-                  }
-                />
+                <Button title={"LinkedIn"} onclick={openLinkedIn} />
               </span>
               <Input
                 error={subjectError}

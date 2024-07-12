@@ -13,7 +13,7 @@ const Coffee = ({ className = "" }) => {
   return (
     <div className={className}>
       <div className={"flex"}>
-        <span className="text-gray-900">{"0000000000000"}</span>
+        <span className="text-transparent">{"0000000000000"}</span>
         <Steam timer={4} />
         <Steam timer={5} />
         <Steam timer={3} />

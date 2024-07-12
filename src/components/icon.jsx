@@ -11,6 +11,8 @@ const icon = {
   "icon-linkedin-squared": <>&#xf30c;</>,
   "icon-react": <>&#xe803;</>,
   "icon-spin1": <>&#xe830;</>,
+  "icon-sun-inv": <>&#xe801;</>,
+  "icon-moon-inv": <>&#xe800;</>,
 };
 
 const Icon = ({ name, style, className = "" }) => {

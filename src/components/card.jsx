@@ -10,7 +10,7 @@ const jacquard = Press_Start_2P({
 const Card = ({ id, image, title, children }) => {
   const _title = (
     <div class="relative mb-2">
-      <div className={`${jacquard.className} text-4xl text-gray-950`}>
+      <div className={`${jacquard.className} text-4xl text-gray-500`}>
         {title}
       </div>
       <div className="absolute italic font-bold text-xl" style={{ bottom: -5 }}>
@@ -21,7 +21,7 @@ const Card = ({ id, image, title, children }) => {
   return (
     <div
       id={id}
-      className="bg-gray-900/75 rounded-2xl shadow-ml shadow-gray-900"
+      className="dark:bg-black/50 bg-gray-50/75 text-gray-900 dark:text-gray-50 rounded-2xl shadow-ml shadow-gray-900"
     >
       {image ? (
         <div className="grid grid-cols-5 p-4">
