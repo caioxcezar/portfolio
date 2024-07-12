@@ -18,12 +18,33 @@ import Image from "next/image";
 import Coffee from "@/components/coffee";
 import Icon from "@/components/icon";
 import Progress from "@/components/progress";
+import Input from "@/components/input";
+import { useState } from "react";
+import Button from "@/components/button";
 
 const getCurrentYear = () => new Date().getFullYear();
 const workingStartDate = getCurrentYear() - 2018 + 1;
 
 export default function Home() {
   const hash = useHash();
+  const [subject, setSubject] = useState("");
+  const [body, setBody] = useState("");
+  const [subjectError, setSubjectError] = useState(false);
+  const [bodyError, setBodyError] = useState(false);
+
+  const sendMail = () => {
+    setSubjectError(!subject);
+    setBodyError(!body);
+    if (!subject || !body) return;
+    const url =
+      "mailto:0hF6h@example.com?subject=" +
+      encodeURI(subject) +
+      "&body=" +
+      encodeURI(body);
+
+    window.open(url);
+  };
+
   return (
     <main className="body grid grid-cols-5 bg-gray-950 w-100 h-dvh select-none">
       <div className="flex flex-col shadow-gray-900 shadow-ml bg-gray-900/75 rounded-2xl m-4">
@@ -162,7 +183,34 @@ export default function Home() {
                 )}
               />
             </Card>
-            <Card id={contact.id} title={contact.title}></Card>
+            <Card id={contact.id} title={contact.title}>
+              <span className="text-xl">
+                Send a e-mail or message via{" "}
+                <Button
+                  title={"LinkedIn"}
+                  onclick={() =>
+                    window.open("https://www.linkedin.com/in/caiocsrezende/")
+                  }
+                />
+              </span>
+              <Input
+                error={subjectError}
+                label="subject"
+                placeholder="subject"
+                value={subject}
+                onchange={setSubject}
+              />
+              <Input
+                error={bodyError}
+                label="body"
+                placeholder="body"
+                multiline
+                value={body}
+                rows={5}
+                onchange={setBody}
+              />
+              <Button title={"Send Mail"} onclick={() => sendMail()} />
+            </Card>
           </div>
         </div>
       </div>
