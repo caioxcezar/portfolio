@@ -13,6 +13,8 @@ const icon = {
   "icon-spin1": <>&#xe830;</>,
   "icon-sun-inv": <>&#xe801;</>,
   "icon-moon-inv": <>&#xe800;</>,
+  "icon-graduation-cap": <>&#xe807;</>,
+  "icon-newspaper": <>&#xe808;</>,
 };
 
 const Icon = ({ name, style, className = "" }) => {

@@ -1,11 +1,50 @@
 {
   "id": "education",
   "title": "Education",
-  "items": [
+  "academics": [
     {
       "title": "Instituto Metodista Granbery",
-      "description": "Information Systems",
-      "date": "2015 - 2019"
+      "description": "Bachelor of Information Systems",
+      "date": "2017 - 2020"
+    },
+    {
+      "title": "PIO XII Teaching Institute",
+      "description": "Computer Technician",
+      "date": "2015 - 2016"
+    }
+  ],
+  "certifications": [
+    {
+      "title": "Scrum Foundation Professional Certificate",
+      "description": "CertiProf"
+    },
+    {
+      "title": "Spring Boot Expert: JPA, RESTFul API, Security, JWT e More",
+      "description": "Udemy"
+    },
+    {
+      "title": "The Complete GitHub Actions & Workflows Guide",
+      "description": "Udemy"
+    },
+    {
+      "title": "TDD em C# com xUnit, NUnit e Moq. Testes e Frameworks .NET",
+      "description": "Udemy"
+    },
+    {
+      "title": "AWS Educate Introduction to Cloud 101",
+      "description": "AWS Educate"
+    },
+    {
+      "title": "Spring Boot Expert: JPA, RESTFul API, Security, JWT e More",
+      "description": "Udemy"
+    },
+    {
+      "title": "Redis: The Complete Developer's Guide",
+      "description": "Udemy"
+    },
+    {
+      "title": "React Testing Library and Jest: The Complete Guide",
+      "description": "Udemy"
     }
   ]
 }

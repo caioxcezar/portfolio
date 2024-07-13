@@ -134,7 +134,7 @@ export default function Home() {
                 keyExtractor={(item) => item.title}
                 renderItem={({ title, description, icon }, id) => (
                   <div
-                    className={`grid grid-cols-12 border-dotted py-2 ${
+                    className={`grid grid-cols-12 border-dotted border-black dark:border-white py-2 ${
                       strengths.items.length != id + 1 && "border-b-2"
                     }`}
                   >
@@ -203,13 +203,33 @@ export default function Home() {
             </Card>
             <Card id={education.id} title={education.title}>
               <FlatList
-                items={education.items}
+                className={
+                  "grid grid-cols-2 gap-4 pb-2 border-dotted border-b-2 border-black dark:border-white"
+                }
+                items={education.academics}
                 keyExtractor={(item) => item.title}
                 renderItem={({ title, description, date }) => (
-                  <div className="">
-                    <p className="text-xl font-bold">{title}</p>
-                    <p className="text-lg">{description}</p>
-                    <p className="text-base">{date}</p>
+                  <div className="flex">
+                    <Icon name="icon-graduation-cap" className="text-5xl" />
+                    <div>
+                      <p className="text-xl font-bold">{title}</p>
+                      <p className="text-lg">{description}</p>
+                      <p className="text-base">{date}</p>
+                    </div>
+                  </div>
+                )}
+              />
+              <FlatList
+                className={"grid grid-cols-4 gap-4 mt-2"}
+                items={education.certifications}
+                keyExtractor={(item) => item.title}
+                renderItem={({ title, description, date }) => (
+                  <div className="flex">
+                    <Icon name="icon-newspaper" className="text-3xl" />
+                    <div>
+                      <p className="text-lg font-bold">{title}</p>
+                      <p className="text-base">{description}</p>
+                    </div>
                   </div>
                 )}
               />
