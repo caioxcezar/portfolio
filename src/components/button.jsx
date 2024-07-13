@@ -1,7 +1,7 @@
 const Button = ({ onclick, title }) => {
   return (
     <button
-      className="bg-blue-500 hover:bg-blue-600 active:bg-blue-700 focus:outline-none focus:ring focus:ring-blue-300 p-2 rounded-full"
+      className="bg-indigo-500 hover:bg-indigo-600 active:bg-indigo-700 focus:outline-none focus:ring focus:ring-indigo-300 p-2 rounded-full text-white"
       onClick={() => onclick()}
     >
       {title}

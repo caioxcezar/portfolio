@@ -1,7 +1,7 @@
 import Icon from "@/components/icon";
 
 const NavItem = ({ title, target, selected }) => (
-  <li className="ease-in-out duration-300 nav-item hover:bg-gray-700 hover:italic hover:font-bold">
+  <li className="ease-in-out duration-300 nav-item hover:bg-gray-400 hover:dark:bg-gray-700 hover:italic hover:font-bold">
     <a href={target} className="flex justify-between py-2 px-4">
       <span className={`${selected ? "italic font-bold" : ""}`}>
         {selected ? `>> ${title}` : title}

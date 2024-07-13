@@ -1,18 +1,10 @@
+import pressStartFont from "@/utils/pressStartFont";
 import Image from "next/image";
-import { Press_Start_2P } from "next/font/google";
-
-const jacquard = Press_Start_2P({
-  weight: ["400"],
-  subsets: ["latin"],
-  display: "swap",
-});
 
 const Card = ({ id, image, title, children }) => {
   const _title = (
-    <div class="relative mb-2">
-      <div className={`${jacquard.className} text-4xl text-gray-500`}>
-        {title}
-      </div>
+    <div className="relative mb-2">
+      <div className={`${pressStartFont} text-4xl text-gray-500`}>{title}</div>
       <div className="absolute italic font-bold text-xl" style={{ bottom: -5 }}>
         {`>> ${title}`}
       </div>

@@ -23,6 +23,7 @@ import { useState } from "react";
 import Button from "@/components/button";
 import useTheme from "@/hooks/useTheme";
 import TopIcon from "@/components/topIcon";
+import pressStartFont from "@/utils/pressStartFont";
 
 const getCurrentYear = () => new Date().getFullYear();
 const workingStartDate = getCurrentYear() - 2018 + 1;
@@ -54,7 +55,14 @@ export default function Home() {
   return (
     <main className="body grid grid-cols-5 dark:bg-gray-950 bg-gray-400 w-100 h-dvh select-none">
       <div className="flex flex-col shadow-gray-900 shadow-ml dark:bg-black/50 bg-gray-50/75 text-gray-900 dark:text-gray-50 rounded-2xl m-4">
-        <div className="text-4xl font-bold mb-4">Caio Rezende</div>
+        <div className="mx-4 mt-4 font-bold">
+          <div className="text-4xl italic absolute">Caio</div>
+          <div
+            className={`${pressStartFont} text-4xl text-gray-500 text-end w-100 pt-7`}
+          >
+            Rezende
+          </div>
+        </div>
         <ul className="nav py-4 flex-1">
           <FlatList
             items={menus}
