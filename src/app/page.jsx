@@ -24,11 +24,13 @@ import Button from "@/components/button";
 import useTheme from "@/hooks/useTheme";
 import TopIcon from "@/components/topIcon";
 import pressStartFont from "@/utils/pressStartFont";
+import { useRouter } from "next/navigation";
 
 const getCurrentYear = () => new Date().getFullYear();
 const workingStartDate = getCurrentYear() - 2018 + 1;
 
 export default function Home() {
+  const router = useRouter();
   const theme = useTheme();
   const hash = useHash();
   const [subject, setSubject] = useState("");
@@ -46,16 +48,16 @@ export default function Home() {
       "&body=" +
       encodeURI(body);
 
-    window.open(url);
+    openLink(url);
   };
 
-  const openLink = (link) => window.open(link);
+  const openLink = (link) => window.open(link, "_blank");
 
   return (
     <main className="body dark:bg-gray-950 bg-gray-400 w-100 h-full select-none flex flex-row">
       <div className="hidden md:block md:w-1/3 lg:block lg:w-1/4">
         <div className="flex flex-col shadow-gray-900 shadow-ml dark:bg-black/50 bg-gray-50/75 text-gray-900 dark:text-gray-50 h-full">
-          <div className="mx-4 mt-4 font-bold">
+          <div className="mx-4 mt-4 font-bold max-w-72">
             <div className="text-4xl italic absolute">Caio</div>
             <div
               className={`${pressStartFont} text-4xl text-gray-500 text-end w-100 pt-7`}
@@ -85,12 +87,14 @@ export default function Home() {
             />
             <TopIcon
               icon={"icon-linkedin-squared"}
-              onclick={openLink("https://www.linkedin.com/in/caiocsrezende/")}
+              onclick={() =>
+                openLink("https://www.linkedin.com/in/caiocsrezende/")
+              }
               className="me-2"
             />
             <TopIcon
               icon={"icon-github"}
-              onclick={() => window.open("https://github.com/caioxcezar")}
+              onclick={() => openLink("https://github.com/caioxcezar")}
             />
           </div>
           <div className="flex gap-4 flex-col">
@@ -245,7 +249,7 @@ export default function Home() {
                 )}
               />
             </Card>
-            <Card id={contact.id} title={contact.title}>
+            {/* <Card id={contact.id} title={contact.title}>
               <span className="text-xl">
                 Send a e-mail or message via{" "}
                 <Button
@@ -272,7 +276,7 @@ export default function Home() {
                 onchange={setBody}
               />
               <Button title={"Send Mail"} onclick={() => sendMail()} />
-            </Card>
+            </Card> */}
           </div>
         </div>
       </div>
