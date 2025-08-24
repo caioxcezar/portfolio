@@ -29,6 +29,13 @@
       "description": "Simple site to manage expenses created to test IndexedDB",
       "image": "https://raw.githubusercontent.com/caioxcezar/money-manager/main/img.png",
       "link": "https://github.com/caioxcezar/money-manager/"
+    },
+    {
+      "title": "Money Manager",
+      "subtitle": "",
+      "description": "A simple application to record the completion of daily goals.",
+      "image": "https://raw.githubusercontent.com/caioxcezar/simple-task-tracker/master/image.png",
+      "link": "https://github.com/caioxcezar/simple-task-tracker"
     }
   ]
 }
